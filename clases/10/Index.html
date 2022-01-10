@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Async / Await</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            El término asíncrono se refiere a una situación en la que dos o más eventos no ocurren
+                            al mismo tiempo. O en términos más sencillos, pueden suceder varias cosas relacionadas
+                            sin esperar a que se complete la acción anterior.
+
+                            En JavaScript, las funciones asíncronas son muy importantes debido a la naturaleza de un
+                            solo subproceso de JavaScript. Con la ayuda de funciones asíncronas, el bucle de eventos
+                            de JavaScript puede encargarse de otras cosas cuando la función solicita algún otro
+                            recurso.
+
+                            Usarías un código asíncrono, por ejemplo, en las API que obtienen un archivo de la red,
+                            cuando accedes a una base de datos y devuelves datos de ella, cuando accedes a una
+                            transmisión de video desde una cámara web, o si estás transmitiendo la pantalla a un
+                            headset de realidad virtual.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Uso
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Tenemos dos partes cuando usamos async/await en nuestro código.
+
+                            En primer lugar, tenemos la palabra clave async , que se pone delante de una declaración de
+                            función para convertirla en una función async.
+
+                            Una función asíncrona es una función que sabe que es posible que se use la palabra clave
+                            await dentro de ella para invocar código asíncrono.</p>
+                    </div>
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Manejo de errores
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Podemos manejar errores usando un bloque try catch, realmente await devuelve una Promesa,
+                            por lo que se le puede concatenar un catch al final. En ese catch podemos controlar el error
+                            y devolver un valor por defecto.
+                            Si falla la consulta devuelvo undefined. De esta forma, el valor de usuarios es, o el
+                            resultado de la consulta, o undefined.
+                            En cualquier caso el código continuará y posteriormente puedo controlar y gestionar si el
+                            resultado ha sido el esperado o undefined.
+                        </p>
+                    </div>
+                    <div id="editorJs3"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div><button class="btnRun" onclick="evaluar3()"><i class="gg-play-button-o"></i></button>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`const datosPromise =  () => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then( res => res.json() )
+    .then( datos => console.log(datos) );
+};
+        
+const datosAsync = async () => {
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+    const datos = await res.json();
+    console.log(datos);
+};
+datosPromise();
+datosAsync();`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+        //slide 3
+        var editorJs3 = ace.edit('editorJs3');
+        editorJs3.setTheme('ace/theme/monokai');
+        editorJs3.getSession().setMode('ace/mode/javascript');
+        editorJs3.setValue(`const datosPromise =  () => {
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
+    .then( res => res.json() )
+    .then( datos => console.log(datos) )
+    .catch(error => console.log(error));
+};
+        
+const datosAsync = async () => {
+    try {
+        const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const datos = await res.json();
+        console.log(datos);
+    } catch(error){
+        console.log(error);
+    }
+};
+datosPromise();
+datosAsync();`);
+        function evaluar3() {
+            eval(editorJs3.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>

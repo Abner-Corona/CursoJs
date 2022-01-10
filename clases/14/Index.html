@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Storage</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción y declaracion
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            LocalStorage y sessionStorage son propiedades de HTML5 (web storage), que permiten almacenar
+                            datos en nuestro navegador web. De manera muy similar a como lo hacen las cookies.
+                        </p>
+                        <ul style="text-align: left;">
+                            <li>
+                                <strong>Local Storage</strong>: Guarda información que permanecerá almacenada por tiempo
+                                indefinido; sin importar que el navegador se cierre.
+                            </li>
+                            <li>
+                                <strong>Session Storage</strong>: Almacena los datos de una sesión y éstos se eliminan
+                                cuando el navegador se cierra.
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/* 
+setItem: guarda el valor con una llave.
+setItem: obtiene el valor por medio de una llave.
+removeItem: elimina el valor por medio de una llave. */
+
+localStorage.setItem('nombre', 'Jon Doe')
+localStorage.edad = 26
+
+console.log( localStorage.getItem('edad') )
+console.log( localStorage.nombre )
+
+localStorage.removeItem("edad");
+localStorage.removeItem("nombre");
+
+sessionStorage.setItem('carrera', 'Sistemas')
+sessionStorage.canta = false
+
+console.log( sessionStorage.getItem('carrera') )
+console.log( sessionStorage.canta )
+
+sessionStorage.removeItem("carrera");
+sessionStorage.removeItem("canta");
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+
+
+    </script>
+</body>
+
+</html>

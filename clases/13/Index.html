@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ciclos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción y declaracion
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            En JavaScript los bucles (loops) son utilizados para realizar tareas repetitivas con base en
+                            una condición. Las condiciones típicamente devuelven true (verdadero) o false(falso) al ser
+                            evaluados. El bucle continuará ejecutándose hasta que la condición devuelva false.
+                        </p>
+
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Iterando arreglos
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            JavaScript nos proporciona una serie de funciones predefinidas para el manejo de arrays,
+                            cuentan con muchos métodos. Para hacer las cosas más sencillas para iterar nos proporcionan:
+
+                        </p>
+                    </div>
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-size: contain;background-image: url(https://scandiweb.com/blog/wp-content/uploads/2021/09/array-prototype-cheat-sheet-.jpeg);">
+
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/* Sintaxis
+while (condicion) {
+ ..codigo..
+}
+
+do {
+    ..codigo..
+}
+while (condicion);
+
+for (<inicialización>; <condición>; <incremento>) {
+  ..codigo..
+}
+
+for (<inicialización> in <arreglo>) {
+    ..codigo..
+}
+
+for (<inicialización> of <arreglo>) {
+    ..codigo..
+}
+*/
+
+var i = 1;
+while (i < 5) {
+    console.log("ciclo while: " + i  );
+    i++;
+}
+
+var i = 1;
+do {
+    console.log("ciclo do while: " + i  );
+    i++;
+}
+while (i <= 5);
+
+var array = [23, 34, 56, "Hola", "Mundo"];
+for(var i = 0; i < array.length; i++)
+{
+    console.log("ciclo for: " + array[i]);
+}
+
+var numeros = [1,2,3,4,5];
+for (let i in numeros) {
+    console.log("ciclo for in: " + numeros[i] );
+}
+
+var numeros = [1,2,3,4,5];
+for (let numero of numeros) {
+    console.log("ciclo for of: " + numero );
+}
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`/*
+        forEach() : Permite iterar el contenido de un array. Recibe un callback que toma como parámetro el elemento actual de la iteración y el indice del mismo.
+map(): Permite recorrer el array y modificar los elementos presentes en él, retornando un nuevo array con la misma longitud que el original.
+filter(): Recorre el array y retorna un nuevo array con aquellos elementos que pasen una determinada condición.
+find() : Recorre el array y retorna la primera coincidencia del elemento que se busca.
+some() : Itera el array y retorna un booleano si como mínimo uno de los elementos presentes en el array pasa una condición determinada. Recibe un callback que se encargara de preguntar aquello que queremos dentro del array.
+every() : Es similar al some(), ya que itera el array y retorna un booleano. Pero esta vez, para que dicho booleano sea true todos los elementos del array deberán pasar la condición dada.
+reduce() : Aplica una función a un acumulador y a cada valor de una array (de izquierda a derecha) para reducirlo a un único valor.
+
+la mayoria recibe 3 parametros (valoaActual, indice*, arreglo*)
+*opcional */
+
+const numeros = [1,2,3,4,5];
+numeros.forEach(elemento => console.log("ciclo forEach: " + elemento ))
+
+let numeroMap = numeros.map(elemento => console.log("ciclo map: " + elemento ))
+
+let numeroFilter = numeros.filter(elemento => elemento >= 2 && elemento < 4   )
+console.log("filter: " + numeroFilter )
+
+let numeroFind = numeros.find(elemento => elemento > 2 )
+console.log("find: " + numeroFind )
+
+let numeroSome= numeros.some(elemento => elemento > 20 )
+console.log("some: " + numeroSome )
+
+let numeroEvery = numeros.every(elemento => elemento <  60 )
+console.log("every: " + numeroEvery )
+
+let numeroReduce= numeros.reduce((elementoAnterior, elemento) => elemento + elementoAnterior  )
+console.log("reduce: " + numeroReduce )
+`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Objetos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Los objetos en JavaScript, al igual que en muchos otros lenguajes de programación, son una
+                            manera eficiente de organizar los datos ( variables y funciones ). De hecho dentro de un
+                            objeto las variables llevan el nombre de propiedades, y las funciones se llaman métodos.
+                            Hay varias maneras de crear un objeto en JavaScript. Podemos crear un objeto utilizando la
+                            notación literal o utilizando un constructor y la palabra clave new.
+                        </p>
+
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Contenido
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            JavaScript no almacena el contenido de las propiedades dentro de los objetos, este solo
+                            guarda el nombre de las propiedades, con referencias a donde están almacenados los valores.
+                            Al copiar objetos se guarda por referencia, lo que quiere decir que todos los objetos se
+                            veran afectados
+                        </p>
+                    </div>
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Acceder a propiedades
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Para acceder a las propiedades tenemos dos opciones
+
+                        </p>
+                        <ul style="text-align: left;">
+                            <li>notación con "."</li>
+                            <li>notación con "[ ]"</li>
+                        </ul>
+                    </div>
+                    <div id="editorJs3"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div><button class="btnRun" onclick="evaluar3()"><i class="gg-play-button-o"></i></button>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/* Objetos declarativos o literales: podemos crear objetos sin necesidad de un constructor o instanciar una clase, para esto solo declaramos el objeto y sus propiedades.*/
+const persona1 = {
+  nombre: 'John',
+  edad: 25,
+  sexo: 'masculino',
+  pasatiempos: ['patinar', 'bailar'],
+  hablar: function(){
+    return \`hola soy \${this.nombre}, y tengo \${this.edad} años\`;
+  }
+}
+console.log(persona1);
+
+/* Objetos construidos: Tenemos el keyword new, el cual nos permite crear un nuevo objeto, de esta manera podemos utilizar una función que cumpla el rol del constructor. */
+function Persona(nombre, edad, sexo, pasatiempos) {
+  this.nombre = nombre;
+  this.edad = edad;
+  this.sexo = sexo;
+  this.pasatiempos = pasatiempos;
+  this.hablar = function() {
+    return \`hola soy \${this.nombre}, y tengo \${this.edad} años\`;
+  };
+}
+const john = new Persona('John', 26, 'masculino', ['cocimnar', 'bailar']);
+console.log(john)
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`const myObj = {
+  nombre: 'yeison',
+  hablar: function(){
+    return \`hola soy \${this.nombre}\`;
+  }
+}
+const myObj2 = myObj
+// const myObj2 = Object.assign({},myObj); shallow copy
+// const myObj2 = JSON.parse(JSON.stringify(a)); deep copy
+const myFunc = myObj.hablar;
+
+myObj.hablar = null;
+
+console.log(myObj.hablar); //null
+console.log(myFunc); // function hablar() {..}`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+        //slide 3
+        var editorJs3 = ace.edit('editorJs3');
+        editorJs3.setTheme('ace/theme/monokai');
+        editorJs3.getSession().setMode('ace/mode/javascript');
+        editorJs3.setValue(`const myObj = {
+  nombre: 'yeison',
+  'nombre y apellido': 'yeison gomez',
+  hablar: function(){
+    return \`hola soy \${ this.nombre }\`;
+  }
+}
+
+console.log(myObj.nombre); //yeison
+
+const propiedad = 'nombre'
+
+console.log(myObj[propiedad]); //yeison
+
+console.log(myObj['nombre y apellido']); //yeison`);
+        function evaluar3() {
+            eval(editorJs3.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>

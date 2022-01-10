@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Callbacks</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Un callback (llamada de vuelta o retrollamada) es una función que recibe como argumento otra
+                            función y la ejecuta. El objetivo de esto es tener una forma más legible de escribir
+                            funciones, más cómoda y flexible para reutilizarlas, y además entra bastante en consonancia
+                            con el concepto de asincronía de Javascript;
+                        </p>
+
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Asincronía
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Las funciones callback pueden utilizarse como un primer intento de manejar la asincronía en
+                            un programa. De hecho, eran muy utilizadas en la época dorada de jQuery, donde muchas
+                            funciones o librerías tenían una estructura similar a esta
+                        </p>
+                    </div>
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Callback hell
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Uno de los problemas evidentes viene a la hora de tener que gestionar la asincronía varias
+                            veces en una misma función, donde al introducir varias funciones con callbacks en su
+                            interior. La forma triangular que produce es conocida como Callback Hell o Pyramid of Doom,
+                            debido a su forma, resultando un código muy poco elegante que se puede complicar demasiado
+                            de cara a la legibilidad. Es cuando entran en juego las promesas
+
+
+                        </p>
+                    </div>
+                    <div id="editorJs3"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div><button class="btnRun" onclick="evaluar3()"><i class="gg-play-button-o"></i></button>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/* Sintaxis:
+function nombre_funcion(vn, ..., callback, ..., vn){
+   …enunciados a ejecutar…
+   callback();
+   …enunciados a ejecutar…
+} */
+
+function funcion1(callback) {
+   alert("hello")
+   callback();
+}
+funcion1(function(){ alert("finished") });
+
+function funcion2(callback) {
+    alert("finished2")
+}
+funcion1(funcion2);
+
+funcion1(() =>  alert("finished3") );
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`/* function doTask(number, callback) {
+  // Código de la función 
+}
+
+doTask(42, function(err, result) {
+  // Trabajamos con err o result según nos interese 
+});
+*/
+
+setTimeout(() => alert("Código asíncrono."), 5000);
+alert("Código síncrono.");`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+        //slide 3
+        var editorJs3 = ace.edit('editorJs3');
+        editorJs3.setTheme('ace/theme/monokai');
+        editorJs3.getSession().setMode('ace/mode/javascript');
+        editorJs3.setValue(`funcion1(data, function(err, result) {
+    funcion2(data, function(err, result) {
+        funcion3(data, function(err, result) {
+            funcion4(data, function(err, result) {
+                funcion5(data, function(err, result) {
+                    funcion6(data, function(err, result) {
+                        funcion7(data, function(err, result) {
+                            funcion8(data, function(err, result) {
+                                funcion9(data, function(err, result) {
+                                    funcion10(data, function(err, result) {
+                                        // Trabajamos con err o result según nos interese 
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });
+            });
+        });
+    });
+});
+`);
+        function evaluar3() {
+            eval(editorJs3.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>

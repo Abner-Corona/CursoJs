@@ -1,0 +1,35 @@
+body{
+    background: #36D1DC;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #5B86E5, #36D1DC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #5B86E5, #36D1DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.slider__pagination {
+  position: absolute;
+  padding: 0px 3vw;
+    bottom: 40vh;
+    text-align: center;
+  }
+  
+  .button {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    margin-top: 5px;
+    border: 2px solid #fff;
+    line-height: 1;
+    font: 600 12px "Montserrat", sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: white;
+    transition: all 0.25s ease;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  .button:hover {
+    color: #333;
+    background-color: white;
+  }

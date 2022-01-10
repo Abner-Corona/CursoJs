@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQuery</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://colorlib.com/wp/wp-content/uploads/sites/2/jquery-logo.jpg.webp);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            JQuery es una librería de JavaScript. Esta librería de código abierto, simplifica la tarea
+                            de programar en
+                            JavaScript y permite agregar interactividad a un sitio web sin tener conocimientos del
+                            lenguaje.
+                            En su momento, esta librería tuvo bastante aceptación en el mundo web, no solo porque
+                            simplificaba muchos procesos o porque enseñó nuevos trucos a los programadores, sino por
+                            ventajas como las siguientes:
+                        </p>
+                        <ul style="text-align: left;">
+                            <li>Permite hacer operaciones del DOM con pocas líneas de código.</li>
+                            <li>Tiene una gran cantidad de plugins para descargar.</li>
+                            <li>Es fácil de aprender y utilizar.</li>
+                            <li> Tiene soporte para AJAX, lo que permite enviar peticiones al servidor y, en base a la
+                                respuesta, modificar una parte de la web sin tener la necesidad de recargar toda la
+                                página.
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://colorlib.com/wp/wp-content/uploads/sites/2/jquery-logo.jpg.webp);">
+                    <div
+                        style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Instalación
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Todos los plugins de JQuery necesitan la librería de JQuery para funcionar. La librería es
+                            un archivo .js que se puede descargar desde el sitio oficial: https://jquery.com/ colocar en
+                            una carpeta js y luego vincular con una etiqueta script.
+                            Otra forma de vincular la librería es utilizando el servidor CDN (Content Delivery Network),
+                            servidores que proporcionan datos de manera ultrarrápida, albergan la librería jQuery.
+                        </p>
+                    </div>
+                    <div id="editorHtml2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://colorlib.com/wp/wp-content/uploads/sites/2/jquery-logo.jpg.webp);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Desventajas
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Después de la aparición de esta librería, JavaScript siguió evolucionando, mientras que
+                            jQuery se ha quedado bastante estancado. Esto se debe a que muchos proyectos empezaron a
+                            optar por jQuery y después es bastante complicado hacer esa migración a otras librerías o
+                            frameworks de JavaScript más modernas, ya que la sintaxis de la librería jQuery no era un
+                            estándar ni tampoco se creó un estándar a partir de la misma.
+                            Durante los últimos años, con la misma evolución de JavaScript, han aparecido muchos
+                            frameworks y librerías, como Angular, React, Vue o Svelte, que permiten hacer las mismas
+                            cosas que jQuery pero siguiendo un estándar y pudiendo mantener un código más limpio.
+
+                        </p>
+                        <ul style="text-align: left;">
+                            <li>Ofrece muchas funcionalidades que probablemente no se necesiten.</li>
+                            <li>Ralentiza la carga de nuestra app debido a tu peso de 93Kb.</li>
+                            <li>Gestionar estilos de CSS con jQuery es bastante complicado.</li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+
+
+        //slide 2
+        var editorHtml2 = ace.edit('editorHtml2');
+        editorHtml2.setTheme('ace/theme/monokai');
+        editorHtml2.getSession().setMode('ace/mode/html');
+        editorHtml2.setValue(`    <script src="js/jquery-3.2.1.min.js"><\/script>
+
+    <script src="http://code.jquery.com/jquery-3.1.0.min.js"><\/script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"><\/script>
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"><\/script>
+
+    <script src=http://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js><\/script>`);
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Eventos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Los eventos son la manera que tenemos en Javascript de controlar las acciones de los
+                            visitantes y definir un comportamiento de la página cuando se produzcan.
+                            Para ello, podemos gestionar los eventos de varias formas:
+                        </p>
+                        <ul style="text-align: left;">
+                            <li>Mediante un atributo HTML precedido de "on" que llama a la función.</li>
+                            <li>Mediante propiedades precedidas de "on" que contienen una función.</li>
+                            <li>Mediante la escucha de eventos a través de listeners.</li>
+                        </ul>
+
+                    </div>
+                    <div style="z-index: 1000;position: absolute;top: 40%;left: 50%;transform: translate(-50%, -50%);">
+                        <button onClick="alert('hola')" id="boton1">boton1</button>
+                        <button id="boton2">boton2</button>
+                        <button id="boton3">boton3</button>
+                        <button id="boton4">boton4</button>
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 200px; width:600px;position: absolute;top: 65%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Otros eventos
+                        </h1>
+                        <ul style="text-align: left;">
+                            <li><Strong>onAbort</Strong>: El usuario interrumpe la carga de una imagen (Image)</li>
+                            <li><Strong>onBlur</Strong>: Un elemento de formulario, una ventana o un marco pierden el
+                                foco (Button, Checkbox, FileUpload, Layer, Password, Radio, Reset, Select, Submit, Text,
+                                Textarea, window)</li>
+                            <li><Strong>onChange</Strong>: El valor de un campo de formulario cambia (FileUpload,
+                                Select, Text, Textarea)</li>
+                            <li><Strong>onClick</Strong>: Se hace click en un objeto o formulario ( Button, document,
+                                Checkbox, Link, Radio, Reset, Submit)</li>
+                            <li><Strong>onDblClick</Strong>: Se hace click doble en un objeto o formulario ( document,
+                                Link)</li>
+                            <li><Strong>onDragDrop</Strong>: El usuario arrastra y suelta un objeto en la ventana
+                                (window)</li>
+                            <li><Strong>onError</Strong>: La carga de un documento o imagen produce un error (Image,
+                                window)
+                            </li>
+                            <li><Strong>onFocus</Strong>: Una ventana, marco o elemento de formulario recibe el foco
+                                (Button,
+                                Checkbox, FileUpload, Layer, Password, Radio, Reset, Select, Submit, Text, Textarea,
+                                window)
+                            </li>
+                            <li><Strong>onKeyDown</Strong>: El usuario pulsa una tecla (document, Image, Link, Textarea)
+                            </li>
+                            <li><Strong>onKeyPress</Strong>: El usuario mantiene pulsada una tecla (document, Image,
+                                Link, Textarea)</li>
+                            <li><Strong>onKeyUp</Strong>: El usuario libera una tecla (document, Image, Link, Textarea)
+                            </li>
+                            <li><Strong>onLoad</Strong>: El navegador termina la carga de una ventana (Image, Layer,
+                                window)</li>
+                            <li><Strong>onMouseDown</Strong>: El usuario pulsa un botón del ratón (Button, document,
+                                Link)</li>
+                            <li><Strong>onMouseMove</Strong>: El usuario mueve el puntero (Ninguno (debe asociarse a
+                                uno))</li>
+                            <li><Strong>onMouseOut</Strong>: El puntero abando una área o enlace ( Layer, Link)</li>
+                            <li><Strong>onMouseOver</Strong>: El puntero entra en una área o imagen ( Layer, Link)</li>
+                            <li><Strong>onMouseUp</Strong>: El usuario libera un botón del ratón (Button, document,
+                                Link)</li>
+                            <li><Strong>onMove</Strong>: Se mueve una ventana o un marco (window)</li>
+                            <li><Strong>onReset</Strong>: El usuario limpia un formulario (Form)</li>
+                            <li><Strong>onResize</Strong>: Se cambia el tamaño de una ventana o marco (window)</li>
+                            <li><Strong>onSelect</Strong>: Se selecciona el texto del campo texto o área de texto de un
+                                formulario (Text, Textarea)</li>
+                            <li><Strong>onSubmit</Strong>: El usuario envía un formulario (Form)</li>
+                            <li><Strong>onUnload</Strong>: El usuario abandona una página (window)</li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/*<button onClick="alert('hola')" id="boton1">boton1</button>
+<button id="boton2">boton2</button>
+<button id="boton3">boton3</button> */
+
+const boton2 = document.querySelector("#boton2");
+boton2.onclick = function() {
+  alert("hola 2");
+}
+
+const boton3 = document.querySelector("#boton3");
+boton3.addEventListener("click", function() {
+  alert("hola 3");
+});
+
+const boton4 = document.querySelector("#boton4");
+const evento4 = () => alert("hola 4")
+boton4.addEventListener("click", evento4);
+
+/* eliminar evento
+onclick = [null/undefined/function(){}/()=>{}]
+removeEventListener("click", funcion)
+*/
+boton4.removeEventListener("click", evento4);
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`
+`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+        //slide 3
+        var editorJs3 = ace.edit('editorJs3');
+        editorJs3.setTheme('ace/theme/monokai');
+        editorJs3.getSession().setMode('ace/mode/javascript');
+        editorJs3.setValue(`/*<div id="sandbox" style="height: 115px;width: 250px;background: crimson;"></div>*/
+/*<div id="sandbox" style="height: 115px;width: 250px;background: crimson;">
+    <div id="divPrueba">
+        <p id="parrafoDiv" style="color: yellow;">
+            soy un parrafo amarillo
+        </p>
+    </div>
+    <button id="botonPrueba" style="background-color: violet;">
+        <p id="parrafoBoton">
+            soy un boton
+        </p>
+    </button>
+</div>*/
+
+/* createElement(tag, options)	Crea y devuelve el elemento HTML definido por el  tag. 
+appendChild(node)	Añade como hijo el nodo. Devuelve el nodo insertado.
+append(element)	Añade como hijo el elemento. Devuelve el elemento insertado.
+*/
+
+var sandbox = document.querySelector("#sandbox"); // obtiene el div padre
+
+//crea el parrafo del div
+var parrafoDiv= document.createElement("p");
+parrafoDiv.id = "parrafoDiv";
+parrafoDiv.style = "color: yellow;";
+parrafoDiv.textContent= "soy un parrafo amarillo"
+//crea el primer div
+var divPrueba= document.createElement("div");
+divPrueba.id = "divPrueba";
+
+divPrueba.appendChild(parrafoDiv) //inserta el parrafo dentro del div
+sandbox.appendChild(divPrueba); //inserta el div dentro del div padre
+
+//crea el parrafo del boton
+var parrafoBoton= document.createElement("p");
+parrafoBoton.id = "parrafoBoton";
+parrafoBoton.textContent= "soy un boton"
+
+// crea el boton
+var botonPrueba= document.createElement("button");
+botonPrueba.id = "botonPrueba";
+botonPrueba.style = "background-color: violet;";
+
+botonPrueba.appendChild(parrafoBoton) //inserta el parrafo dentro del boton
+sandbox.appendChild(botonPrueba); //inserta el boton dentro del div padre
+`);
+        function evaluar3() {
+            eval(editorJs3.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>

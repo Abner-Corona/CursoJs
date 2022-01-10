@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Varibles</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <input type="radio" name="css-fadeshow" id="slide-4" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Variables
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Una variable es un elemento que se emplea para almacenar valores. Las variables en
+                            JavaScript se
+                            crean mediante la palabra reservada var, solamente se debe indicar al definir por primera
+                            vez la
+                            variable, lo que se denomina declarar una variable.
+                        </p>
+
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Tipo de dato numérico
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Se utilizan para almacenar valores numéricos enteros (llamados integer en inglés) o
+                            decimales (llamados float en inglés). En este caso, el valor se asigna indicando
+                            directamente el número entero o decimal. Los números decimales utilizan el carácter '.''
+                            (punto) en vez de ',' (coma) para separar la parte entera y la parte decimal:
+                        </p>
+                    </div>
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Tipo de dato cadena
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Se utilizan para almacenar caracteres, palabras y/o frases de texto. Para asignar el valor a
+                            la variable, se encierra el valor entre comillas dobles, simples o invertidas, para
+                            delimitar su comienzo y su final:
+                        </p>
+                    </div>
+                    <div id="editorJs3"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar3()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Otros tipos de datos
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Hay seis valores posibles tipos de datos: objeto, booleano, función, número, cadena e
+                            indefinido. La siguiente resume los posibles valores devueltos por el operador typeof.
+                        </p>
+                    </div>
+                    <div id="editorJs4"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick=" evaluar4()"><i class="gg-play-button-o"></i></button>
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+                <label class="fs-quick-btn" for="slide-4"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+                <label class="fs-prev-btn" for="slide-4"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+                <label class="fs-next-btn" for="slide-4"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`//Por medio de un valor concreto 
+var resultado = 3 + 1;
+alert(resultado);
+
+//Por medio del valor obtenido de otra variable.
+var numero_1 = 3;
+var numero_2 = 1;
+var resultado = numero_1 + numero_2;
+alert(resultado);
+
+/*
+El nombre de una variable también se conoce como identificador 
+y debe cumplir las siguientes normas:
+ • Sólo puede estar formado por letras, números y los símbolos '$'' y '_'.
+ • El primer carácter no puede ser un número.
+*/`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`var iva = 16;        // variable tipo entero
+alert(typeof(iva));
+var total = 234.65;  // variable tipo decimal
+alert(typeof(total));`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+        //slide 3
+        var editorJs3 = ace.edit('editorJs3');
+        editorJs3.setTheme('ace/theme/monokai');
+        editorJs3.getSession().setMode('ace/mode/javascript');
+        editorJs3.setValue(`var mensaje = "Bienvenido a nuestro sitio web";
+alert(mensaje);
+alert(typeof(mensaje));
+
+var nombre = 'Jhon';
+alert(nombre);
+alert(typeof(nombre));
+
+var plantillaLiteral= \`\${mensaje} \${nombre}\`;
+alert(plantillaLiteral);
+alert(typeof(plantillaLiteral));
+`);
+        function evaluar3() {
+            eval(editorJs3.getValue())
+        }
+
+        //slide 4
+        var editorJs4 = ace.edit('editorJs4');
+        editorJs4.setTheme('ace/theme/monokai');
+        editorJs4.getSession().setMode('ace/mode/javascript');
+        editorJs4.setValue(`alert(typeof {a:1}); //object
+alert(typeof true); //boolean
+alert(typeof function(){}); //function
+alert(typeof 1); //number
+alert(typeof ""); //string
+alert(typeof variableNoCreada); //undefined
+`);
+        function evaluar4() {
+            eval(editorJs4.getValue())
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>DOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            El DOM (Document Object Model) da una representación del documento como un grupo de nodos y
+                            objetos estructurados
+                            que tienen propiedades y métodos. Esencialmente, conecta las páginas web a scripts o
+                            lenguajes de programación.
+                            En Javascript, cuando nos referimos al DOM nos referimos a esta estructura, que podemos
+                            modificar de forma dinámica desde Javascript, añadiendo nuevas etiquetas, modificando o
+                            eliminando otras, cambiando sus atributos HTML, añadiendo clases, cambiando el contenido de
+                            texto, etc...
+                        </p>
+                        <p class="parrafo">Hola este es mi párrafo</p>
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 20%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Seleccionar y navegar
+                        </h1>
+                        <p class="parrafoPrueba" id="parrafo1">Hola este es mi párrafo 1</p>
+                        <p class="parrafoPrueba" id="parrafo2">
+                            Hola este es mi párrafo 2
+                        <div name="div1">
+                            aca hay un div
+                        </div>
+                        </p>
+                        <div atributoRandom="nosequeponer" id="parrafo3">
+                            Hola este es mi párrafo 3
+                            <p>
+                                estoy en un div
+                            </p>
+                            <div>
+                                <button id="boton1">soy un boton</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Insertar y crear
+                        </h1>
+                        <div id="sandbox" style="height: 115px;width: 250px;background: crimson;">
+
+                        </div>
+                    </div>
+                    <div id="editorJs3"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div><button class="btnRun" onclick="evaluar3()"><i class="gg-play-button-o"></i></button>
+
+                </div>
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/* <p class="parrafo">Hola este es mi párrafo</p> */
+document.querySelector(".parrafo").textContent = "Párrafo dinámico";
+let parrafo = document.querySelector(".parrafo");
+parrafo.style ="font-size: 25px;color: aqua;"
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`/*<p class="parrafo" id="parrafo1">Hola este es mi párrafo 1</p>
+<p class="parrafo" id="parrafo2">
+    Hola este es mi párrafo 2
+    <div name="div1">
+        aca hay un div
+    </div>
+</p>
+<p atributoRandom="nosequeponer" id="parrafo3">
+    Hola este es mi párrafo 3
+    <div>
+        <button id="boton1">soy un boton</button>
+    </div>
+</p>*/
+
+/* getElementById(id): Busca el elemento HTML con el id id. Si no, devuelve null.
+  getElementsByClassName(class): Busca elementos con la clase class. Si no, devuelve [].
+  getElementsByName(name): Busca elementos con atributo name name. Si no, devuelve [].
+  getElementsByTagName(tag): Busca elementos tag. Si no encuentra ninguno, devuelve [].
+  querySelector(sel): Busca el primer elemento que coincide con el selector CSS sel. Si no, null.
+  querySelectorAll(sel): Busca todos los elementos que coinciden con el selector CSS sel. Si no, [].
+*/
+
+//por id
+console.log("Id get: ", document.getElementById("parrafo1"));
+console.log("Id query: ", document.querySelector("#parrafo1")); 
+console.log("Id queryAll: ",document.querySelectorAll("#parrafo1")); 
+
+//por clase
+console.log("Clase get: ", document.getElementsByClassName("parrafoPrueba"));
+console.log("Clase query: ", document.querySelector(".parrafoPrueba")); 
+console.log("Clase queryAll: ",document.querySelectorAll(".parrafoPrueba")); 
+
+//por nombre
+console.log("Nombre get: ", document.getElementsByName("div1"));
+console.log("Nombre query: ", document.querySelector("[name='div1']")); 
+console.log("Nombre queryAll: ",document.querySelectorAll("[name='div1']")); 
+
+//por etiqueta
+console.log("Etiqueta get: ", document.getElementsByTagName("p"));
+console.log("Etiqueta query: ", document.querySelector("p")); 
+console.log("Etiqueta queryAll: ",document.querySelectorAll("p"));
+
+//por atributo
+console.log("Atributo query: ", document.querySelector("[atributoRandom='nosequeponer']")); 
+console.log("Atributo queryAll: ",document.querySelectorAll("[atributoRandom='nosequeponer']"));
+
+/*children: Devuelve una lista de elementos HTML hijos.
+ parentElement: Devuelve el padre del elemento o  si no tiene.
+ firstElementChild: Devuelve el primer elemento hijo.
+ lastElementChild: Devuelve el último elemento hijo.
+ previousElementSibling: Devuelve el elemento hermano anterior o  si no tiene.
+ nextElementSibling: Devuelve el elemento hermano siguiente o  si no tiene.*/
+var elemento = document.querySelector("[atributoRandom='nosequeponer']")
+console.log(elemento.children); 
+console.log(elemento.parentElement); 
+console.log(elemento.firstElementChild); 
+console.log(elemento.lastElementChild); 
+console.log(elemento.previousElementSibling); 
+console.log(elemento.nextElementSibling); 
+
+/*childNodes: Devuelve una lista de nodos hijos. Incluye nodos de texto y comentarios.
+ parentNode: Devuelve el nodo padre del nodo o  si no tiene.
+ firstChild: Devuelve el primer nodo hijo.
+ lastChild: Devuelve el último nodo hijo.
+ previousSibling: Devuelve el nodo hermano anterior o  si no tiene.
+ nextSibling: Devuelve el nodo hermano siguiente o  si no tiene.*/
+var elemento = document.querySelector("[atributoRandom='nosequeponer']");
+console.log(elemento.childNodes); 
+console.log(elemento.parentNode); 
+console.log(elemento.firstChild); 
+console.log(elemento.lastChild); 
+console.log(elemento.previousSibling); 
+console.log(elemento.nextSibling); 
+`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+        //slide 3
+        var editorJs3 = ace.edit('editorJs3');
+        editorJs3.setTheme('ace/theme/monokai');
+        editorJs3.getSession().setMode('ace/mode/javascript');
+        editorJs3.setValue(`/*<div id="sandbox" style="height: 115px;width: 250px;background: crimson;"></div>*/
+/*<div id="sandbox" style="height: 115px;width: 250px;background: crimson;">
+    <div id="divPrueba">
+        <p id="parrafoDiv" style="color: yellow;">
+            soy un parrafo amarillo
+        </p>
+    </div>
+    <button id="botonPrueba" style="background-color: violet;">
+        <p id="parrafoBoton">
+            soy un boton
+        </p>
+    </button>
+</div>*/
+
+/* createElement(tag, options): Crea y devuelve el elemento HTML definido por el  tag. 
+appendChild(node): Añade como hijo el nodo. Devuelve el nodo insertado.
+append(element): Añade como hijo el elemento. Devuelve el elemento insertado.
+*/
+
+var sandbox = document.querySelector("#sandbox"); // obtiene el div padre
+
+//crea el parrafo del div
+var parrafoDiv= document.createElement("p");
+parrafoDiv.id = "parrafoDiv";
+parrafoDiv.style = "color: yellow;";
+parrafoDiv.textContent= "soy un parrafo amarillo"
+//crea el primer div
+var divPrueba= document.createElement("div");
+divPrueba.id = "divPrueba";
+
+divPrueba.appendChild(parrafoDiv) //inserta el parrafo dentro del div
+sandbox.appendChild(divPrueba); //inserta el div dentro del div padre
+
+//crea el parrafo del boton
+var parrafoBoton= document.createElement("p");
+parrafoBoton.id = "parrafoBoton";
+parrafoBoton.textContent= "soy un boton"
+
+// crea el boton
+var botonPrueba= document.createElement("button");
+botonPrueba.id = "botonPrueba";
+botonPrueba.style = "background-color: violet;";
+
+botonPrueba.appendChild(parrafoBoton) //inserta el parrafo dentro del boton
+sandbox.appendChild(botonPrueba); //inserta el boton dentro del div padre
+
+/*
+remove(): Elimina el propio nodo de su elemento padre.
+removeChild(node): Elimina y devuelve el nodo hijo node.
+replaceChild(new, old): Reemplaza el nodo hijo old por new. Devuelve old.
+*/
+`);
+        function evaluar3() {
+            eval(editorJs3.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>

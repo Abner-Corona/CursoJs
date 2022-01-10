@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Implementación</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+            <!-- Slides -->
+            <div class="fs-slides">
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Archivo externo
+                        </h1>
+                        <p style="font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            index.html
+                        </p>
+                        <div id="editorHtml1" style="height: 155px; width:600px"></div>
+                        <p style="font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            codigo.js
+                        </p>
+                        <div id="editorJs1" style="height: 100px; width: 600px"></div>
+
+                    </div>
+
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Mismo Documento
+                        </h1>
+                        <p style="font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            index.html
+                        </p>
+                        <div id="editorHtml2" style="height: 180px; width:600px"></div>
+
+                    </div>
+
+                    <button class="btnRun" onclick="evaluar2()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            En los elementos HTML
+                        </h1>
+                        <p style="font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            index.html
+                        </p>
+                        <div id="editorHtml3" style="height: 180px; width:600px"></div>
+
+                    </div>
+
+                    <button class="btnRun" onclick="evaluar3()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`alert("Hola mundo")`);
+
+        var editorHtml1 = ace.edit('editorHtml1');
+        editorHtml1.setTheme('ace/theme/monokai');
+        editorHtml1.getSession().setMode('ace/mode/html');
+        editorHtml1.setValue(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript" src="/js/codigo.js"><\/script>
+</head>
+<body>
+</body>
+</html>`);
+        var Range = ace.require('ace/range').Range;
+        editorHtml1.session.addMarker(new Range(7, 0, 7, 1), "myMarker", "fullLine");
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        // slide 2
+        var editorHtml2 = ace.edit('editorHtml2');
+        editorHtml2.setTheme('ace/theme/monokai');
+        editorHtml2.getSession().setMode('ace/mode/javascript');
+        editorHtml2.setValue(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+    <script type="text/javascript">
+        alert("Un mensaje de prueba");
+    <\/script>
+</head>
+<body>
+</body>
+</html>`);
+        var Range = ace.require('ace/range').Range;
+        editorHtml2.session.addMarker(new Range(7, 0, 9, 1), "myMarker", "fullLine");
+        function evaluar2() {
+            eval(`alert("Un mensaje de prueba");`)
+        }
+
+
+        // slide 3
+        var editorHtml3 = ace.edit('editorHtml3');
+        editorHtml3.setTheme('ace/theme/monokai');
+        editorHtml3.getSession().setMode('ace/mode/javascript');
+        editorHtml3.setValue(`<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de código JavaScript en el propio documento</title>
+</head>
+<body>
+    <p onclick="alert('Un párrafo de texto.')">Un párrafo de texto.</p>
+</body>
+</html>`);
+        var Range = ace.require('ace/range').Range;
+        editorHtml3.session.addMarker(new Range(9, 0, 9, 1), "myMarker", "fullLine");
+        function evaluar3() {
+            eval(`alert("Un párrafo de texto.");`)
+        }
+
+    </script>
+</body>
+
+</html>

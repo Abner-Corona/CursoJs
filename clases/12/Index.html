@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arreglos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../css/slides.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div data-am-fadeshow="next-prev-navigation">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <!-- Slides -->
+            <div class="fs-slides">
+
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Introducción y declaracion
+                        </h1>
+                        <p
+                            style="text-align: justify;font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Los arrays son un conjunto de datos o una estructura de datos no homogéneos que se
+                            encuentran ubicados en forma consecutiva en la memoria RAM.
+                            Los arrays son de gran importancia ya que permiten organizar series de datos que comparten
+                            el mismo nombre pero se diferencian por un índice.
+                        </p>
+
+                    </div>
+                    <div id="editorJs1"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" onclick="evaluar1()"><i class="gg-play-button-o"></i></button>
+                </div>
+
+                <div class="fs-slide"
+                    style="background-image: url(https://www.workato.com/product-hub/wp-content/uploads/2020/12/workato-blog-JavaScript-20201208-bl-01.jpg);">
+                    <div
+                        style="position: absolute; top: 25%; left: 50%; transform: translate(-50%, -50%); color: white; font-family: sans-serif; text-align: center; text-shadow: 0 0 20px rgba(0,0,0,0.5);">
+                        <h1 style="margin-top: 0; margin-bottom: 0.8vw; font-size: 35px; font-weight: bold;">
+                            Propiedades y Métodos
+                        </h1>
+                        <p
+                            style="text-align: justify; font-size: 18px;; font-weight: 100;margin-bottom: 0; margin-top: 0;">
+                            Todo objeto de JavaScript, tanto los intrínsecos como los definidos por el programador,
+                            tiene propiedades y/o métodos. Los del objeto Array que nos interesan son:
+                        </p>
+                    </div>
+                    <div id="editorJs2"
+                        style="height: 285px; width:600px;position: absolute;top: 60%;z-index: 1000;left: 50%;transform: translate(-50%, -50%);">
+                    </div>
+                    <button class="btnRun" style="z-index: 200000000000!important;" onclick="evaluar2()"><i
+                            class="gg-play-button-o"></i></button>
+                </div>
+
+
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../../js/ace.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/mode-javascript.min.js" type="text/javascript" charset="utf-8"></script>
+
+    <script src="../../js/mode-html.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/theme-monokai.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+
+        //slide 1
+        var editorJs1 = ace.edit('editorJs1');
+        editorJs1.setTheme('ace/theme/monokai');
+        editorJs1.getSession().setMode('ace/mode/javascript');
+        editorJs1.setValue(`/* Sintaxis
+[var/let/const] nombreVariable = [];
+
+[var/let/const] nombreVariable = new Array(); */
+
+let colores1 = new Array("rojo", "azul", "verde"); 
+console.log(colores1)
+let colores2 = ["amarillo", "violeta", "rosa"] ;
+console.log(colores2)
+`);
+        function evaluar1() {
+            eval(editorJs1.getValue())
+        }
+
+        //slide 2
+        var editorJs2 = ace.edit('editorJs2');
+        editorJs2.setTheme('ace/theme/monokai');
+        editorJs2.getSession().setMode('ace/mode/javascript');
+        editorJs2.setValue(`/*length: devuelve al número de elementos del array.
+  concat: este metodo añade al final de un array los elemementos de otro array.
+  join: este metodo crea un texto con los elementos del array separados por un carácter que se especifique.
+  reverse: este metodo genera un nuevo array transponiendo los elementos del array al que le aplicamos dicho método.
+  sort: ordena los elementos de un array.
+  push: transforma un array añadiendo los elementos al final del array y devolviendo la nueva longitud del array.
+  pop:  permite eliminar el último elemento del array, disminuyendo la longitud de dicho array.
+  unshift: transforma un array añadiendo los elementos al principio del array y devolviendo la nueva longitud del array.
+  shift: permite obtener el primer elemento de un array, como lo veremos a continuación.
+  slice: devuelve los elementos contenidos en el array, de acuerdo a los argumentos indicados.
+  splice: cambia el contenido de un array removiendo elementos existentes y/o agregando nuevos elementos.
+  indexOf: retorna el primer índice en el que se puede encontrar un elemento dado en el array, ó retorna -1 si el elemento no esta presente.
+  includes: determina si una matriz incluye un determinado elemento, devuelve true o false según corresponda.
+  */
+let numeros1 = [1,2,3];
+let numeros2 = [4,5,6];
+let numeros3;
+
+console.log("length:", numeros1.length );
+
+numeros3 = numeros2.concat(numeros1);
+console.log("concat:", numeros3 );
+
+console.log("join:", numeros1.join("-") );
+
+console.log("reverse:", numeros1.reverse() );
+
+console.log("sort:", numeros3.sort() );
+
+numeros3.push(7)
+console.log("push:", numeros3 );
+
+numeros3.pop()
+console.log("pop:", numeros3 );
+
+numeros3.unshift(0)
+console.log("unshift:", numeros3 );
+
+numeros3.shift()
+console.log("shift:", numeros3 );
+
+console.log("slice:", numeros3.slice(1,3) );
+
+numeros3.splice(1,0,'pepe');
+console.log("splice:", numeros3 );
+
+console.log("indexOf:", numeros3.indexOf(5) );
+
+console.log("includes:", numeros3.includes(3) );
+`);
+        function evaluar2() {
+            eval(editorJs2.getValue())
+        }
+
+
+    </script>
+</body>
+
+</html>
